@@ -1,6 +1,4 @@
 import './Home.css';
-import metaphorical_self_img from './img/metaphorical_self.jpg';
-import real_self_img from './img/real_self.jpg';
 import Projects from './markside_components/Projects';
 import YTEmbed from './markside_components/YTEmbed';
 
