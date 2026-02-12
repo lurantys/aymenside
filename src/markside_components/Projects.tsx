@@ -1,15 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import { ALL_PROJECT_ITEMS } from "./ProjectItem";
 
-const validTabs: string[] = ["Current", "General/Web Dev", "Games"];
+const validTabs: string[] = ["Experience", "Education", "Projects & Achievements"];
 
 // TODO: useEffect to re-render when active tab changes...? i.e. dependency array of [activeTab] I think?
 
 function Projects() {
     // Parent projects component, handles clicking etc.
     // TODO: Better way than just relying on the string name?
-    const [activeTab, setActiveTab] = useState("Current")
+    const [activeTab, setActiveTab] = useState("Experience")
+
+    useEffect(() => {
+        const hash = window.location.hash.slice(1);
+        if (hash === "Projects") {
+            setActiveTab("Projects & Achievements");
+            // Scroll to the projects section
+            setTimeout(() => {
+                const projectsContainer = document.querySelector('.projects-container');
+                if (projectsContainer) {
+                    projectsContainer.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 0);
+        }
+    }, []);
 
     let isMobile: boolean = useMediaQuery( {query: "(max-width: 720px)"})
 

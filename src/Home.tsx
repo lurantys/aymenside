@@ -12,24 +12,24 @@ function Home() {
                     <div className='blue-bubble who-am-i'>
                         <h1 className='blue-league-title'>Who am I?</h1>
                         <p className='gray-league-paragraph'>
-                        By day, I am a <span className='league-p-bold'>[fullstack, backend] <a className='league-p-clickable' href="http://www.linkedin.com/in/markbacon78">Software Engineer</a></span> based in Seattle, focusing on <span className='league-p-bold'>building human-centric things </span> grounded in meticulous design and technical challenge. Through games and apps I <span className='league-p-bold'>connect users with intuitive interfaces and thoughtful functionality</span>. I enjoy working on <span className='league-p-bold'>designing and implementing systems that make users' lives easier</span> and more manageable without getting caught up in the details. In games and through gamification, I seek to leverage multiplayer accountability and fun to bring people back into a world lacking a bit of connection.
+                        By day, I'm a <span className='league-p-bold'><a className='league-p-clickable' href="https://www.linkedin.com/in/aymen-nhaila-9ab6b5319/">computer science student</a></span> who likes building stuff and figuring out how things work. I enjoy turning ideas into <span className='league-p-bold'>clean, usable software</span> and solving problems that feel genuinely satisfying to crack. I'm less about overengineering and more about <span className='league-p-bold'>making things that work well and feel good to use</span>.
                         <br></br><br></br>
-                        By night, I'm a jack of all trades, working on <span className='league-p-bold'>[indie game, web] projects to keep programming fun</span>, with focuses on <span className='league-p-bold'>meaningful decisions through player agency</span> and <span className='league-p-bold'>bringing gamification into people's lives</span>. I'm studying for the JLPT N4, enjoy keeping up to date with linguistics, trail run, practice MMA, meditate, and continue the lifelong pursuit of art. Check out my <a className='league-p-clickable' href="#Projects">Projects</a> section for how I'm bringing these ideas to life!
+                        By night, I'm just a <span className='league-p-bold'>big nerd having fun with it</span>. I work on random projects, mess around with code, and think way too much about games—whether that's grinding Pokémon, sweating in Valorant, or breaking down why certain systems keep players coming back. When I'm not coding, I'm probably gaming, learning something new for no real reason, or thinking about how to make ideas more fun and interactive.
                         <br></br><br></br>
-                        My <a className='league-p-clickable' href="https://markbacon78.wordpress.com/">WordPress Blog</a> has insights and thoughts about what I'm working on. And sometimes just the world, or reality itself. You can also find me on <a className='league-p-clickable' href="https://bsky.app/profile/dendrobyte.bsky.social">BlueSky (@dendrobyte.bsky.social)</a> sharing my thoughts with the void.</p>
+                        Check out my <a className='league-p-clickable' href="#Projects"><span className='league-p-bold'>Projects</span></a> if you want to see what I've been building lately.</p>
 
                         <br></br><br></br>
                     </div>
                     <div className='blue-bubble self-pictures'>
                         <div className='self-picture-item'>
-                            <img src={real_self_img} alt='The Real Me'></img>
+                            <img src="https://i.pinimg.com/1200x/d1/82/a0/d182a0afeee4d81b21c6f3979c033421.jpg" alt='The Real Me'></img>
                             <p className='picture-subtitle'>The Real Me</p>
                         </div>
                         
                         <br></br>
                         
                         <div className='self-picture-item'>
-                            <img src={metaphorical_self_img} alt='Metaphorical Self'></img>
+                            <img src="https://i.pinimg.com/736x/76/b7/b0/76b7b003e0d2d6c048bc1a08d7e1ae17.jpg" alt='Metaphorical Self'></img>
                             <p className='picture-subtitle'>Metaphorical Self</p>
                         </div>
                         
@@ -44,12 +44,13 @@ function Home() {
                     <div className='blue-bubble half-container'>
                         <h1 className='blue-league-title'>Misc Links</h1>
                         <ul> { /* TODO: I could make this iterative? */ }
-                            <li className='misc-links-list-item'>- <a href="/emergenshibe" className='misc-links-title'>Emergenshibe</a>, for when you need shibe support</li>
-                            <li className='misc-links-list-item'>- <a href="/https://dendrobyte.itch.io/" className='misc-links-title'>My itch.io page</a>, in case the Games tab is not totally up to date</li>
+                            <li className='misc-links-list-item'>- <a href="https://www.linkedin.com/in/aymen-nhaila-9ab6b5319/" className='misc-links-title'>LinkedIn</a>, my professional profile</li>
+                            <li className='misc-links-list-item'>- <a href="https://github.com/lurantys/" className='misc-links-title'>GitHub</a>, where you can find all my code</li>
+                            <li className='misc-links-list-item'>- <a href="https://leetcode.com/u/lurantys/" className='misc-links-title'>LeetCode</a>, (i'm not that active)</li>
+                            <li className='misc-links-list-item'>- <a href="mailto:a.nhaila@aui.ma" className='misc-links-title'>Email</a>, for professional purposes</li>
                             <hr></hr>
-                            <li className='misc-links-list-item'>- <a href="http://markbacon78.wordpress.com/" className='misc-links-title'>My blog, Markside</a>, which for now is hosted on WordPress</li>
-                            <li className='misc-links-list-item'>- <a href="http://www.github.com/dendrobyte" className='misc-links-title'>GitHub</a> has effectively all the code for my projects, including this website!</li>
-                            <li className='misc-links-list-item'>- <a href="http://www.instagram.com/markbacon78" className='misc-links-title'>My Instagram</a>, though admittedly I'm not all that active aside from 5:30am wakeup stories</li>
+                            <li className='misc-links-list-item'>- <a href="https://www.instagram.com/hisiuan/" className='misc-links-title'>Instagram</a>, if you know me personally</li>
+                            <li className='misc-links-list-item'>- <a href="https://discord.com/users/865523572730363955" className='misc-links-title'>Discord</a>, this is where i'm probably going to reply the fastest</li>
                         </ul>
                     </div>
                     <div className='blue-bubble yt-container'>

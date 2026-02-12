@@ -1,26 +1,9 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-
 function YTEmbed() {
-    let [lifestyleVideoId, setLifestyleVideoId] = useState('');
-
-    useEffect(() =>{
-        axios.get('https://service.markbacon78.workers.dev/youtube_latest_lifestyle', {
-        headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "GET,HEAD,POST,OPTIONS",
-            "Access-Control-Allow-Headers": "*",
-        }
-        }).then(res => {
-            setLifestyleVideoId(res.data);
-        })
-    }, [])
-    
     return (
     <>
-        <h1 className='blue-league-title'>Latest YouTube Video</h1>
-        <p className='gray-league-paragraph'>I make videos around what I do and what I work on, from updates on my latest development project to my progress in Spartan race training.</p>
-        <iframe className='yt-video-embed' src={`https://www.youtube.com/embed/${lifestyleVideoId}?si=IE-zn4rxBTztQGT_`} title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+        <h1 className='blue-league-title'>Now Playing</h1>
+        <p className='gray-league-paragraph'>Check out what I'm listening to on Spotify</p>
+        <iframe style={{borderRadius: '12px'}} src="https://open.spotify.com/embed/playlist/5fkSKBiYYePY2bOlgBi33l?utm_source=generator" width="100%" height="380" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </>
     )
 }

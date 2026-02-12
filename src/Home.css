@@ -27,6 +27,7 @@
     .middle-flex-row {
         display: flex;
         flex-direction: row;
+        width: 100%;
     }
 }
   
@@ -46,6 +47,18 @@
 
 .who-am-i {
     flex-grow: 17;
+}
+
+.half-container {
+    flex-grow: 100;
+    width: 40%;
+    max-width: 40%;
+}
+
+.yt-container {
+    flex-grow: 0.1;
+    width: 60%;
+    max-width: 60%;
 }
 
 /* For desktop, put images on the side */
@@ -93,8 +106,9 @@
 
 .gray-league-paragraph {
     font-family: "League Spartan", sans-serif;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 200;
+    line-height: 1.3;
 }
 
 .text-centered {
@@ -222,10 +236,6 @@
     color: #7688B1;
     width: 90%;
     opacity: 0.2;
-}
-
-.half-container {
-    flex-grow: 1;
 }
 
 .misc-links-title {
