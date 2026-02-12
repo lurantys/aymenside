@@ -53,7 +53,26 @@ export const ALL_PROJECT_ITEMS: Map<string, JSX.Element[]> = new Map<string, JSX
             link="https://www.hiroden.co.jp/"
         />
     ]], 
-    ["Projects & Achievements",[]], 
+    ["Projects & Achievements",[
+        <ProjectItem
+            title="PokeDoro"
+            description={["A", "Pokémon-inspired Pomodoro web app", "that gamifies focus and productivity, pairing", "timed work sessions", "with tasks, streaks, and", "progression mechanics"]}
+            subtext="The core timer and task system are live, with badges, Pokédex progression, and additional gamified features in development."
+            link="https://pokedorosf.vercel.app/"
+        />,
+        <ProjectItem
+            title="Yoshi"
+            description={["A", "mood-driven web app", "that generates", "personalized Spotify playlists", "based on how you're feeling, what you're doing, or the vibe you want"]}
+            subtext="Users can describe their mood in natural language or choose quick presets, with the app handling playlist creation through Spotify integration."
+            link="https://yoshi-red.vercel.app/"
+        />,
+        <ProjectItem
+            title="QuoteThat"
+            description={["A", "Python-based Discord bot", "that generates", "styled quote images", "using Discord.py and Pillow, allowing users to create and share inspirational quote graphics directly within their server"]}
+            subtext="The core quote image generation and Discord integration are implemented, with plans to expand customization options and quote sources."
+            link="https://github.com/lurantys/quotethat"
+        />
+    ]], 
     ["Education", [
         <ProjectItem
             title="Al Akhawayn University"

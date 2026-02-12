@@ -27,7 +27,7 @@ function Home() {
                         <br></br>
                         
                         <div className='self-picture-item'>
-                            <img src="https://i.pinimg.com/736x/76/b7/b0/76b7b003e0d2d6c048bc1a08d7e1ae17.jpg" alt='Metaphorical Self'></img>
+                            <img src="https://i.pinimg.com/736x/88/30/d5/8830d5708b04e57803cedcb6016f7659.jpg" alt='Metaphorical Self'></img>
                             <p className='picture-subtitle'>Metaphorical Self</p>
                         </div>
                         
