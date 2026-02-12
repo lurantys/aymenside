@@ -53,6 +53,7 @@
     flex-grow: 100;
     width: 40%;
     max-width: 40%;
+    position: relative;
 }
 
 .yt-container {
@@ -66,7 +67,9 @@
     .self-pictures {
         flex-grow: 3;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
   
@@ -79,13 +82,14 @@
 }
 
 .self-picture-item {
-    margin: .1em auto;
+    margin: .5em auto;
 }
 
 .self-picture-item img {
     display: inline-block;
-    max-width: 10em;
-    object-fit: contain;
+    width: 10em;
+    height: 10em;
+    object-fit: cover;
 }
 
 .self-picture-item p {
@@ -272,6 +276,14 @@
     font-family: "League Spartan", sans-serif;
     font-size: 18px;
     margin: .4em 0em;
+}
+
+.wooper-decoration {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    width: 5em;
+    opacity: 0.8;
 }
 
 .yt-container {
