@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import { ALL_PROJECT_ITEMS } from "./ProjectItem";
 
@@ -10,6 +10,7 @@ function Projects() {
     // Parent projects component, handles clicking etc.
     // TODO: Better way than just relying on the string name?
     const [activeTab, setActiveTab] = useState("Experience")
+    const projectListRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const hash = window.location.hash.slice(1);
@@ -24,6 +25,22 @@ function Projects() {
             }, 0);
         }
     }, []);
+
+    useEffect(() => {
+        // Set max-height with a transition for smooth shrinking and expanding
+        if (projectListRef.current) {
+            // Set to large value initially to allow content to render
+            projectListRef.current.style.maxHeight = '2000px';
+            
+            // After content renders, measure actual height and animate to it
+            setTimeout(() => {
+                if (projectListRef.current) {
+                    const newHeight = projectListRef.current.scrollHeight;
+                    projectListRef.current.style.maxHeight = `${newHeight}px`;
+                }
+            }, 0);
+        }
+    }, [activeTab]);
 
     let isMobile: boolean = useMediaQuery( {query: "(max-width: 720px)"})
 
@@ -52,7 +69,7 @@ function Projects() {
                     })
                 }
                 </div>
-            <div className='project-list'>
+            <div className='project-list' key={activeTab} ref={projectListRef}>
                 {ALL_PROJECT_ITEMS.get(activeTab)}
                 {/* <p className='project-subtext'>Project titles link to active pages (repositories, deployments, downloads).</p> */}
             </div>
