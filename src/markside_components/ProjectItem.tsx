@@ -33,16 +33,16 @@ export default ProjectItem;
 export const ALL_PROJECT_ITEMS: Map<string, JSX.Element[]> = new Map<string, JSX.Element[]>([
     ["Experience", [
         <ProjectItem
+            title="Data Science Intern"
+            description={["Built", "AI models", "for", "accident prevention", "using machine learning and data analysis to improve safety systems"]}
+            subtext="Hiroshima Electric Railway · Internship | January 2026 – March 2026 | Hiroshima, Japan"
+            link="https://www.hiroden.co.jp/"
+        />,
+        <ProjectItem
             title="Hack Club Neighborhood"
             description={["Created and showcased", "coding projects", "in a global student community, focusing on", "rapid prototyping, problem-solving,", "and", "peer-to-peer learning"]}
             subtext="Hack Club · Internship | May 2025 – Aug 2025 | San Francisco Bay Area · Hybrid"
             link="https://hackclub.com/"
-        />,
-        <ProjectItem
-            title="Data Science Intern"
-            description={["Built", "AI models", "for", "accident prevention", "using machine learning and data analysis to improve safety systems"]}
-            subtext="Hiroshima Electric Railway · Internship"
-            link="https://www.hiroden.co.jp/"
         />
     ]], 
     ["Projects & Achievements", [
