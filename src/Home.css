@@ -358,25 +358,13 @@
 }
 
 .yt-container {
-    height: 28em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-@media only screen and (max-width: 719px) {
-    .yt-container {
-        height: 24em;
-    }
-}
-
-.yt-video-embed {
-    margin: 1em auto;
-    display: block;
-    width: 80%;
-    height: 60%;
-}
-
-@media only screen and (max-width: 719px) {
-    .yt-video-embed {
-        width: 95%;
-        height: 55%;
-    }
+.yt-container iframe {
+    margin-top: 1em;
+    max-width: 100%;
 }
