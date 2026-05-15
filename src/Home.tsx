@@ -29,7 +29,7 @@ function Home() {
                         <br></br>
                         
                         <div className='self-picture-item'>
-                            <img src="https://i.pinimg.com/736x/88/30/d5/8830d5708b04e57803cedcb6016f7659.jpg" alt='Metaphorical Self'></img>
+                            <img src="https://scontent-nrt6-1.cdninstagram.com/v/t51.82787-19/670855449_18010175789903695_8400091343140556545_n.jpg?_nc_cat=106&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=1JWNqCU1m6oQ7kNvwEEAOe-&_nc_oc=AdodJpRcvaymHGlOSXTfdlWr14qrX7o4LApTxopeUlOk6Pf8cvdmrlHH0W_TwIpf5mZBJX3TTr-kYAJpBxYgwaW1&_nc_zt=24&_nc_ht=scontent-nrt6-1.cdninstagram.com&_nc_gid=f5eLKc8Jff78WMvhkmIwUQ&_nc_ss=7b6a8&oh=00_Af7ji2Feixiw_2XBTew164DveQ8Xqh8hIRn3iymghKrfMQ&oe=6A0CB220" alt='Metaphorical Self'></img>
                             <p className='picture-subtitle'>Metaphorical Self</p>
                         </div>
                         
