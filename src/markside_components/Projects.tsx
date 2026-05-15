@@ -9,21 +9,30 @@ function Projects() {
     const projectListRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
+        const activateProjects = () => {
+            setActiveTab("Projects & Achievements");
+            setTimeout(() => {
+                const projectsContainer = document.querySelector('.projects-container');
+                if (projectsContainer) {
+                    projectsContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }, 100);
+        };
+
         const handleHash = () => {
             const hash = window.location.hash.slice(1);
             if (hash === "Projects") {
-                setActiveTab("Projects & Achievements");
-                setTimeout(() => {
-                    const projectsContainer = document.querySelector('.projects-container');
-                    if (projectsContainer) {
-                        projectsContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    }
-                }, 100);
+                activateProjects();
             }
         };
+
         handleHash();
         window.addEventListener('hashchange', handleHash);
-        return () => window.removeEventListener('hashchange', handleHash);
+        window.addEventListener('openProjects', activateProjects);
+        return () => {
+            window.removeEventListener('hashchange', handleHash);
+            window.removeEventListener('openProjects', activateProjects);
+        };
     }, []);
 
     useEffect(() => {

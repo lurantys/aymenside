@@ -16,7 +16,7 @@ function Home() {
                         <br></br><br></br>
                         Outside of coding, I spend time exploring game systems, interactive experiences, and the technology behind the products people use every day.
                         <br></br><br></br>
-                        Check out my <a className='league-p-clickable' href="#Projects"><span className='league-p-bold'>Projects</span></a> to see what I've been working on.</p>
+                        Check out my <a className='league-p-clickable' href="#Projects" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('openProjects')); }}><span className='league-p-bold'>Projects</span></a> to see what I've been working on.</p>
 
                         <br></br><br></br>
                     </div>
