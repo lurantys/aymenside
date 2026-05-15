@@ -15,9 +15,9 @@ function Projects() {
             setTimeout(() => {
                 const projectsContainer = document.querySelector('.projects-container');
                 if (projectsContainer) {
-                    projectsContainer.scrollIntoView({ behavior: 'smooth' });
+                    projectsContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
-            }, 0);
+            }, 100);
         }
     }, []);
 
