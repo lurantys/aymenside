@@ -12,11 +12,11 @@ function Home() {
                     <div className='blue-bubble who-am-i'>
                         <h1 className='blue-league-title'>Who am I?</h1>
                         <p className='gray-league-paragraph'>
-                        By day, I'm a <span className='league-p-bold'><a className='league-p-clickable' href="https://www.linkedin.com/in/aymen-nhaila-9ab6b5319/">computer science student</a></span> who likes building stuff and figuring out how things work. I enjoy turning ideas into <span className='league-p-bold'>clean, usable software</span> and solving problems that feel genuinely satisfying to crack. I'm less about overengineering and more about <span className='league-p-bold'>making things that work well and feel good to use</span>.
+                        <span className='league-p-bold'>Computer science student</span> focused on building clean, functional, and user-friendly software. I enjoy solving technical problems, experimenting with new ideas, and creating projects that balance simplicity with good design.
                         <br></br><br></br>
-                        By night, I'm just a <span className='league-p-bold'>big nerd having fun with it</span>. I work on random projects, mess around with code, and think way too much about games—whether that's grinding Pokémon, sweating in Valorant, or breaking down why certain systems keep players coming back. When I'm not coding, I'm probably gaming, learning something new for no real reason, or thinking about how to make ideas more fun and interactive.
+                        Outside of coding, I spend time exploring game systems, interactive experiences, and the technology behind the products people use every day.
                         <br></br><br></br>
-                        Check out my <a className='league-p-clickable' href="#Projects"><span className='league-p-bold'>Projects</span></a> if you want to see what I've been building lately.</p>
+                        Check out my <a className='league-p-clickable' href="#Projects"><span className='league-p-bold'>Projects</span></a> to see what I've been working on.</p>
 
                         <br></br><br></br>
                     </div>
