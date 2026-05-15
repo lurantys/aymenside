@@ -47,6 +47,12 @@ export const ALL_PROJECT_ITEMS: Map<string, JSX.Element[]> = new Map<string, JSX
     ]], 
     ["Projects & Achievements", [
         <ProjectItem
+            title="SafirMed"
+            description={["A", "doctor directory web app", "for El Jadida, making it easy to", "find and connect with local healthcare providers", "through a clean, accessible interface"]}
+            subtext="Built with Next.js and deployed on Vercel."
+            link="https://safirmed.vercel.app/"
+        />,
+        <ProjectItem
             title="PokeDoro"
             description={["A", "Pokémon-inspired Pomodoro web app", "that gamifies focus and productivity, pairing", "timed work sessions", "with tasks, streaks, and", "progression mechanics"]}
             subtext="The core timer and task system are live, with badges, Pokédex progression, and additional gamified features in development."
