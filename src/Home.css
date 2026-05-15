@@ -19,6 +19,7 @@
 @media only screen and (min-width: 1080px) {
     .container-body-width {
       width: 60%;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
@@ -28,10 +29,11 @@
         width: 100%;
     }
 }
-  
-@media only screen and (max-width: 1079px) {
-    .container {
-      width: 100%;
+
+@media only screen and (min-width: 720px) and (max-width: 1079px) {
+    .container-body-width {
+      width: 85%;
+      margin: 0 auto;
     }
 
     .middle-flex-row {
@@ -39,7 +41,23 @@
         flex-direction: row;
         flex-wrap: wrap;
     }
-    
+}
+
+@media only screen and (max-width: 719px) {
+    .container-body-width {
+      width: 100%;
+      padding: 0 0.5em;
+    }
+
+    .middle-flex-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blue-bubble {
+        padding: 1em;
+        margin: 0.4em;
+    }
 }
 
 .who-am-i {
@@ -59,6 +77,18 @@
     max-width: 60%;
 }
 
+@media only screen and (max-width: 719px) {
+    .half-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .yt-container {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
 @media only screen and (min-width: 720px) {
     .self-pictures {
         flex-grow: 3;
@@ -68,11 +98,23 @@
         align-items: center;
     }
 }
-  
+
 @media only screen and (max-width: 719px) {
     .self-pictures {
         display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
         width: 100%;
+    }
+
+    .self-picture-item {
+        margin: 0.3em;
+    }
+
+    .self-picture-item img {
+        width: 8em;
+        height: 8em;
     }
 }
 
@@ -85,6 +127,7 @@
     width: 10em;
     height: 10em;
     object-fit: cover;
+    border-radius: 0.5em;
 }
 
 .self-picture-item p {
@@ -98,16 +141,23 @@
 .blue-league-title {
     font-family: "League Spartan", sans-serif;
     margin-bottom: .2em;
-    font-size: 36px;
+    font-size: clamp(1.5rem, 4vw, 36px);
     font-weight: 400;
     color: #1D4296;
 }
 
 .gray-league-paragraph {
     font-family: "League Spartan", sans-serif;
-    font-size: 24px;
+    font-size: clamp(1rem, 2.5vw, 24px);
     font-weight: 200;
-    line-height: 1.3;
+    line-height: 1.4;
+}
+
+@media only screen and (max-width: 719px) {
+    .gray-league-paragraph {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
 }
 
 .text-centered {
@@ -155,7 +205,7 @@
 
 .project-tab-title {
     font-family: "League Spartan", sans-serif;
-    font-size: 30px;
+    font-size: clamp(1.2rem, 3vw, 30px);
     display: inline;
     margin-right: .5em;
 }
@@ -174,7 +224,7 @@
 
 .mobile-project-tab-title {
     font-family: "League Spartan", sans-serif;
-    font-size: 28px;
+    font-size: clamp(1.1rem, 4vw, 28px);
     padding: .3em;
     margin: .1em 0;
     border-radius: 10px;
@@ -212,7 +262,7 @@
 
 .project-title {
     font-family: "League Spartan", sans-serif;
-    font-size: 24px;
+    font-size: clamp(1.1rem, 2.5vw, 24px);
     text-decoration: none;
 }
 
@@ -239,15 +289,17 @@
 
 .project-desc {
     font-family: "League Spartan", sans-serif;
-    font-size: 18px;
+    font-size: clamp(0.9rem, 2vw, 18px);
     font-weight: 300;
     margin: 8px 0px;
+    line-height: 1.4;
 }
 
 .project-subtext {
     font-family: "League Spartan", sans-serif;
-    font-size: 16px;
+    font-size: clamp(0.8rem, 1.8vw, 16px);
     font-weight: 100;
+    line-height: 1.3;
 }
 
 .project-divide {
@@ -285,7 +337,7 @@
 .misc-links-list-item {
     font-weight: 200;
     font-family: "League Spartan", sans-serif;
-    font-size: 18px;
+    font-size: clamp(0.9rem, 2vw, 18px);
     margin: .4em 0em;
 }
 
@@ -297,8 +349,22 @@
     opacity: 0.8;
 }
 
+@media only screen and (max-width: 719px) {
+    .wooper-decoration {
+        width: 3.5em;
+        bottom: 0.5em;
+        right: 0.5em;
+    }
+}
+
 .yt-container {
     height: 28em;
+}
+
+@media only screen and (max-width: 719px) {
+    .yt-container {
+        height: 24em;
+    }
 }
 
 .yt-video-embed {
@@ -306,4 +372,11 @@
     display: block;
     width: 80%;
     height: 60%;
+}
+
+@media only screen and (max-width: 719px) {
+    .yt-video-embed {
+        width: 95%;
+        height: 55%;
+    }
 }
