@@ -10,18 +10,16 @@
     margin: .5em;
 }
 
-/* TODO: Making this middle column reflexive so on certain width it just expans to 100%? */
 .middle-column {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-/* For desktop screens */
 @media only screen and (min-width: 1080px) {
     .container-body-width {
       width: 60%;
-      margin: 0 auto; /* Center the container */
+      margin: 0 auto;
     }
 
     .middle-flex-row {
@@ -31,7 +29,6 @@
     }
 }
   
-/* For smaller screens */
 @media only screen and (max-width: 1079px) {
     .container {
       width: 100%;
@@ -53,6 +50,7 @@
     flex-grow: 100;
     width: 40%;
     max-width: 40%;
+    position: relative;
 }
 
 .yt-container {
@@ -61,16 +59,16 @@
     max-width: 60%;
 }
 
-/* For desktop, put images on the side */
 @media only screen and (min-width: 720px) {
     .self-pictures {
         flex-grow: 3;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
   
-/* For mobile, set to full width. Prev restricted by container. */
 @media only screen and (max-width: 719px) {
     .self-pictures {
         display: flex;
@@ -79,13 +77,14 @@
 }
 
 .self-picture-item {
-    margin: .1em auto;
+    margin: .5em auto;
 }
 
 .self-picture-item img {
     display: inline-block;
-    max-width: 10em;
-    object-fit: contain;
+    width: 10em;
+    height: 10em;
+    object-fit: cover;
 }
 
 .self-picture-item p {
@@ -125,6 +124,26 @@
     text-decoration: none;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .projects-container {
     padding: .1em;
 }
@@ -153,8 +172,6 @@
     color: #7688B1;
 }
 
-/* Mobile project nav menu */
-
 .mobile-project-tab-title {
     font-family: "League Spartan", sans-serif;
     font-size: 28px;
@@ -182,9 +199,13 @@
     background-color: rgb(153, 156, 162);
 }
 
-/* End of mobile project nav menu */
+.project-list {
+    animation: fadeIn 0.4s ease-in, slideInUp 0.4s ease-out;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
 
-.project-section { /* Section within a tab */
+.project-section {
     margin: 1em 0em;
     text-align: left;
 }
@@ -195,7 +216,6 @@
     text-decoration: none;
 }
 
-/* Project Titles Clickable Classes */
 .project-title-link:link {
     text-decoration: none;
     color: #191919;
@@ -217,9 +237,7 @@
     color: #191919;
 }
 
-/* End of Project Titles */
-
-.project-desc { /* Matches .gray-league-paragraph | Generalize? */
+.project-desc {
     font-family: "League Spartan", sans-serif;
     font-size: 18px;
     font-weight: 300;
@@ -238,16 +256,11 @@
     opacity: 0.2;
 }
 
-.half-container {
-    flex-grow: 1;
-}
-
 .misc-links-title {
     font-weight: 400;
     font-family: "League Spartan", sans-serif;
 }
 
-/* Misc Links Clickable Classes */
 .misc-links-title:link {
     text-decoration: none;
     color: #1D4296;
@@ -269,13 +282,19 @@
     color: #1D4296;
 }
 
-/* End of Misc Links */
-
 .misc-links-list-item {
     font-weight: 200;
     font-family: "League Spartan", sans-serif;
     font-size: 18px;
     margin: .4em 0em;
+}
+
+.wooper-decoration {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    width: 5em;
+    opacity: 0.8;
 }
 
 .yt-container {

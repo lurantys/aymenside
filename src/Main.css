@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 @import url("https://use.typekit.net/pzo7ugc.css");
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -26,7 +21,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -49,8 +44,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-/* END OF CSS RESET */
 
 .league-spartan-regular {
   font-family: "League Spartan", sans-serif;
@@ -107,18 +100,4 @@ body {
   .header-text {
       font-size: 4em;
   }
-}
-
-.footer-gray-bg {
-  background-color: rgba(4, 4, 4, 0.82);
-  height: 100%;
-  width: 100%;
-}
-
-.footer-text {
-  font-family: "dovetail-mvb", serif;;
-  text-align: left;
-  font-size: 1em;
-  padding: 1em;
-  color: #EDEDED;
 }

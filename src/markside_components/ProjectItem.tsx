@@ -6,13 +6,8 @@ interface ProjectItemProps {
 }
 
 function ProjectItem(props: ProjectItemProps): JSX.Element {
-    // Defines a project component.
-    // Takes in a title and an array for the description.
-    // Every other element in the array will be bolded.
     const descriptionParts: JSX.Element[] = []
 
-    // We act on assumption that odd elements are bolded.
-    // And for the spaces, that the last element is not bolded.
     props.description.forEach((el, i) => {
         if (i % 2 !== 0) {
             descriptionParts.push(<span key={i} className='league-p-bold'> {el} </span>)
@@ -34,8 +29,7 @@ function ProjectItem(props: ProjectItemProps): JSX.Element {
 
 export default ProjectItem;
 
-// Keys are the tab title for retrieval in Projects tab.
-// Items are ordered most recent first.
+// Items ordered most recent first.
 export const ALL_PROJECT_ITEMS: Map<string, JSX.Element[]> = new Map<string, JSX.Element[]>([
     ["Experience", [
         <ProjectItem
@@ -49,6 +43,26 @@ export const ALL_PROJECT_ITEMS: Map<string, JSX.Element[]> = new Map<string, JSX
             description={["Built", "AI models", "for", "accident prevention", "using machine learning and data analysis to improve safety systems"]}
             subtext="Hiroshima Electric Railway · Internship"
             link="https://www.hiroden.co.jp/"
+        />
+    ]], 
+    ["Projects & Achievements", [
+        <ProjectItem
+            title="PokeDoro"
+            description={["A", "Pokémon-inspired Pomodoro web app", "that gamifies focus and productivity, pairing", "timed work sessions", "with tasks, streaks, and", "progression mechanics"]}
+            subtext="The core timer and task system are live, with badges, Pokédex progression, and additional gamified features in development."
+            link="https://pokedorosf.vercel.app/"
+        />,
+        <ProjectItem
+            title="Yoshi"
+            description={["A", "mood-driven web app", "that generates", "personalized Spotify playlists", "based on how you're feeling, what you're doing, or the vibe you want"]}
+            subtext="Users can describe their mood in natural language or choose quick presets, with the app handling playlist creation through Spotify integration."
+            link="https://yoshi-red.vercel.app/"
+        />,
+        <ProjectItem
+            title="QuoteThat"
+            description={["A", "Python-based Discord bot", "that generates", "styled quote images", "using Discord.py and Pillow, allowing users to create and share inspirational quote graphics directly within their server"]}
+            subtext="The core quote image generation and Discord integration are implemented, with plans to expand customization options and quote sources."
+            link="https://github.com/lurantys/quotethat"
         />
     ]], 
     ["Education", [
@@ -65,6 +79,5 @@ export const ALL_PROJECT_ITEMS: Map<string, JSX.Element[]> = new Map<string, JSX
             link="https://www.aui.ma/"
         />
     ]],
-    ["Projects & Achievements", []]
+    ["Games", []]
 ]);
-

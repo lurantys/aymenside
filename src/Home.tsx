@@ -1,4 +1,6 @@
 import './Home.css';
+import real_self_img from './img/real_self.jpg';
+import wooper_img from './img/wooper.png';
 import Projects from './markside_components/Projects';
 import YTEmbed from './markside_components/YTEmbed';
 
@@ -20,14 +22,14 @@ function Home() {
                     </div>
                     <div className='blue-bubble self-pictures'>
                         <div className='self-picture-item'>
-                            <img src="https://i.pinimg.com/1200x/d1/82/a0/d182a0afeee4d81b21c6f3979c033421.jpg" alt='The Real Me'></img>
+                            <img src={real_self_img} alt='The Real Me'></img>
                             <p className='picture-subtitle'>The Real Me</p>
                         </div>
                         
                         <br></br>
                         
                         <div className='self-picture-item'>
-                            <img src="https://i.pinimg.com/736x/76/b7/b0/76b7b003e0d2d6c048bc1a08d7e1ae17.jpg" alt='Metaphorical Self'></img>
+                            <img src="https://i.pinimg.com/736x/88/30/d5/8830d5708b04e57803cedcb6016f7659.jpg" alt='Metaphorical Self'></img>
                             <p className='picture-subtitle'>Metaphorical Self</p>
                         </div>
                         
@@ -50,6 +52,7 @@ function Home() {
                             <li className='misc-links-list-item'>- <a href="https://www.instagram.com/hisiuan/" className='misc-links-title'>Instagram</a>, if you know me personally</li>
                             <li className='misc-links-list-item'>- <a href="https://discord.com/users/865523572730363955" className='misc-links-title'>Discord</a>, this is where i'm probably going to reply the fastest</li>
                         </ul>
+                        <img src={wooper_img} alt="Wooper" className='wooper-decoration' />
                     </div>
                     <div className='blue-bubble yt-container'>
                         <YTEmbed />
