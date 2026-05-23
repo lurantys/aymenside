@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import { ALL_PROJECT_ITEMS } from "./ProjectItem";
 
@@ -6,7 +6,6 @@ const validTabs: string[] = ["Experience", "Education", "Projects & Achievements
 
 function Projects() {
     const [activeTab, setActiveTab] = useState("Experience")
-    const projectListRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const activateProjects = () => {
@@ -35,18 +34,6 @@ function Projects() {
         };
     }, []);
 
-    useEffect(() => {
-        if (projectListRef.current) {
-            projectListRef.current.style.maxHeight = '2000px';
-            setTimeout(() => {
-                if (projectListRef.current) {
-                    const newHeight = projectListRef.current.scrollHeight;
-                    projectListRef.current.style.maxHeight = `${newHeight}px`;
-                }
-            }, 0);
-        }
-    }, [activeTab]);
-
     let isMobile: boolean = useMediaQuery( {query: "(max-width: 720px)"})
 
     return (
@@ -69,7 +56,7 @@ function Projects() {
                     })
                 }
                 </div>
-            <div className='project-list' key={activeTab} ref={projectListRef}>
+            <div className='project-list'>
                 {ALL_PROJECT_ITEMS.get(activeTab)}
             </div>
         </div>
