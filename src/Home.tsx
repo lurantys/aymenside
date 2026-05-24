@@ -50,7 +50,6 @@ function Home() {
                             <li className='misc-links-list-item'>- <a href="mailto:a.nhaila@aui.ma" className='misc-links-title'>Email</a>, for professional purposes</li>
                             <hr></hr>
                             <li className='misc-links-list-item'>- <a href="https://www.instagram.com/bynhaila/" className='misc-links-title'>Instagram</a>, if you know me personally</li>
-                            <li className='misc-links-list-item'>- <a href="https://discord.com/users/865523572730363955" className='misc-links-title'>Discord</a>, this is where i'm probably going to reply the fastest</li>
                         </ul>
                         <img src={wooper_img} alt="Wooper" className='wooper-decoration' />
                     </div>
