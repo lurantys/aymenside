@@ -56,9 +56,10 @@ function Home() {
                     </div>
                     <div className='blue-bubble half-container'>
                         <h1 className='blue-league-title'>What I've Been Working On</h1>
-                        <a href="https://pokelidstrak.vercel.app/index.html">
-                            <img src="https://pokelidstrak.vercel.app/assets/logo.png" alt="Pokelids'Trak" className='checkout-image' />
-                        </a>
+                        <p className='gray-league-paragraph'>Check out Shenanigans!</p>
+                        <div className='video-embed-container'>
+                            <iframe src="https://www.youtube.com/embed/omh8FLFJX7Y" title="Shenanigans" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
