@@ -55,8 +55,7 @@ function Home() {
                         <img src={wooper_img} alt="Wooper" className='wooper-decoration' />
                     </div>
                     <div className='blue-bubble half-container'>
-                        <h1 className='blue-league-title'>What I've Been Working On</h1>
-                        <p className='gray-league-paragraph'>Check out Shenanigans!</p>
+                        <h1 className='blue-league-title'>Shenanigans</h1>
                         <div className='video-embed-container'>
                             <iframe src="https://www.youtube.com/embed/omh8FLFJX7Y" title="Shenanigans" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         </div>
