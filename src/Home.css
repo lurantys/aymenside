@@ -326,7 +326,7 @@
     width: 5em;
     margin-top: 1em;
     opacity: 0.8;
-    align-self: flex-start;
+    align-self: flex-end;
 }
 
 @media only screen and (max-width: 719px) {
