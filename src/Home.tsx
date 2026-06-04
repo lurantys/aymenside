@@ -41,18 +41,20 @@ function Home() {
                 </div>
                 <div className='middle-flex-row'>
                     <div className='blue-bubble half-container'>
-                        <h1 className='blue-league-title'>Misc Links</h1>
-                        <ul>
-                            <li className='misc-links-list-item'>- <a href="https://www.linkedin.com/in/aymen-nhaila-9ab6b5319/" className='misc-links-title'>LinkedIn</a>, my professional profile</li>
-                            <li className='misc-links-list-item'>- <a href="https://github.com/lurantys/" className='misc-links-title'>GitHub</a>, where you can find all my code</li>
-                            <li className='misc-links-list-item'>- <a href="https://leetcode.com/u/lurantys/" className='misc-links-title'>LeetCode</a>, (i'm not that active)</li>
-                            <li className='misc-links-list-item'>- <a href="mailto:a.nhaila@aui.ma" className='misc-links-title'>Email</a>, for professional purposes</li>
-                            <hr></hr>
-                            <li className='misc-links-list-item'>- <a href="https://www.instagram.com/bynhaila/" className='misc-links-title'>Instagram</a>, if you know me personally</li>
-                        </ul>
+                        <div className='half-container-content'>
+                            <h1 className='blue-league-title'>Misc Links</h1>
+                            <ul>
+                                <li className='misc-links-list-item'>- <a href="https://www.linkedin.com/in/aymen-nhaila-9ab6b5319/" className='misc-links-title'>LinkedIn</a>, my professional profile</li>
+                                <li className='misc-links-list-item'>- <a href="https://github.com/lurantys/" className='misc-links-title'>GitHub</a>, where you can find all my code</li>
+                                <li className='misc-links-list-item'>- <a href="https://leetcode.com/u/lurantys/" className='misc-links-title'>LeetCode</a>, (i'm not that active)</li>
+                                <li className='misc-links-list-item'>- <a href="mailto:a.nhaila@aui.ma" className='misc-links-title'>Email</a>, for professional purposes</li>
+                                <hr></hr>
+                                <li className='misc-links-list-item'>- <a href="https://www.instagram.com/bynhaila/" className='misc-links-title'>Instagram</a>, if you know me personally</li>
+                            </ul>
+                        </div>
                         <img src={wooper_img} alt="Wooper" className='wooper-decoration' />
                     </div>
-                    <div className='blue-bubble'>
+                    <div className='blue-bubble half-container'>
                         <h1 className='blue-league-title'>You Should Check Out</h1>
                         <a href="https://pokelidstrak.vercel.app/index.html">
                             <img src="https://pokelidstrak.vercel.app/assets/logo.png" alt="Pokelids'Trak" className='checkout-image' />

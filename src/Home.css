@@ -65,10 +65,17 @@
 }
 
 .half-container {
-    flex-grow: 100;
-    width: 40%;
-    max-width: 40%;
-    position: relative;
+    flex: 1;
+    min-width: 0;
+}
+
+.half-container:first-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.half-container-content {
+    flex: 1;
 }
 
 .yt-container {
@@ -79,11 +86,6 @@
 
 @media only screen and (max-width: 719px) {
     .half-container {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .yt-container {
         width: 100%;
         max-width: 100%;
     }
@@ -322,8 +324,9 @@
 .wooper-decoration {
     display: block;
     width: 5em;
-    margin: 1em auto 0;
+    margin-top: 1em;
     opacity: 0.8;
+    align-self: flex-start;
 }
 
 @media only screen and (max-width: 719px) {
@@ -335,7 +338,7 @@
 .checkout-image {
     display: block;
     width: 100%;
-    max-width: 300px;
+    max-width: 200px;
     margin: 1em auto 0;
     border-radius: 0.5em;
 }
