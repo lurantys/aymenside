@@ -29,7 +29,7 @@ function Home() {
                         <br></br>
                         
                         <div className='self-picture-item'>
-                            <img src="https://media.discordapp.net/attachments/1321149477519753216/1506225478053269605/Ru_render_headshot_2026-05-19T09_13_21.355Z.png?ex=6a12c34a&is=6a1171ca&hm=988651140ae343f8118118f88909fe50bccb9d1b7960c19af4244fc0d4f995a3&=&format=webp&quality=lossless&width=1494&height=1494" alt='Metaphorical Self'></img>
+                            <img src="https://media.discordapp.net/attachments/1321149477519753216/1506225478053269605/Ru_render_headshot_2026-05-19T09_13_21.355Z.png?ex=6a22954a&is=6a2143ca&hm=f2f0bb609919abf4a3f31cfecc1b09fb39ca0fd37c838443f34ce2391efdd25c&=&format=webp&quality=lossless&width=1494&height=1494" alt='Metaphorical Self'></img>
                             <p className='picture-subtitle'>Metaphorical Self</p>
                         </div>
                         
