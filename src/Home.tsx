@@ -2,7 +2,6 @@ import './Home.css';
 import real_self_img from './img/real_self.jpg';
 import wooper_img from './img/wooper.png';
 import Projects from './markside_components/Projects';
-import YTEmbed from './markside_components/YTEmbed';
 
 function Home() {
     return (
@@ -53,9 +52,7 @@ function Home() {
                         </ul>
                         <img src={wooper_img} alt="Wooper" className='wooper-decoration' />
                     </div>
-                    <div className='blue-bubble yt-container'>
-                        <YTEmbed />
-                    </div>
+
                 </div>
             </div>
         </>
