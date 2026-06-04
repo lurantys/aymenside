@@ -320,29 +320,22 @@
 }
 
 .wooper-decoration {
-    position: absolute;
-    bottom: 1em;
-    right: 1em;
+    display: block;
     width: 5em;
+    margin: 1em auto 0;
     opacity: 0.8;
 }
 
 @media only screen and (max-width: 719px) {
     .wooper-decoration {
         width: 3.5em;
-        bottom: 0.5em;
-        right: 0.5em;
     }
 }
 
-.yt-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.yt-container iframe {
-    margin-top: 1em;
-    max-width: 100%;
+.checkout-image {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 1em auto 0;
+    border-radius: 0.5em;
 }
