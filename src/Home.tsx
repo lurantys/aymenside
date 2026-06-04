@@ -55,7 +55,7 @@ function Home() {
                         <img src={wooper_img} alt="Wooper" className='wooper-decoration' />
                     </div>
                     <div className='blue-bubble half-container'>
-                        <h1 className='blue-league-title'>You Should Check Out</h1>
+                        <h1 className='blue-league-title'>What I've Been Working On</h1>
                         <a href="https://pokelidstrak.vercel.app/index.html">
                             <img src="https://pokelidstrak.vercel.app/assets/logo.png" alt="Pokelids'Trak" className='checkout-image' />
                         </a>
