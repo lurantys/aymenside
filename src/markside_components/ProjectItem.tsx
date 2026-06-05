@@ -35,13 +35,13 @@ export const ALL_PROJECT_ITEMS: Map<string, JSX.Element[]> = new Map<string, JSX
         <ProjectItem
             title="Data Science Intern"
             description={["Built", "AI models", "for", "accident prevention", "using machine learning and data analysis to improve safety systems"]}
-            subtext="Hiroshima Electric Railway · Internship | January 2026 – March 2026 | Hiroshima, Japan"
+            subtext={undefined}
             link="https://www.hiroden.co.jp/"
         />,
         <ProjectItem
             title="Hack Club Neighborhood"
             description={["Created and showcased", "coding projects", "in a global student community, focusing on", "rapid prototyping, problem-solving,", "and", "peer-to-peer learning"]}
-            subtext="Hack Club · Internship | May 2025 – Aug 2025 | San Francisco Bay Area · Hybrid"
+            subtext={undefined}
             link="https://hackclub.com/"
         />
     ]], 
@@ -75,13 +75,13 @@ export const ALL_PROJECT_ITEMS: Map<string, JSX.Element[]> = new Map<string, JSX
         <ProjectItem
             title="Eikei University of Hiroshima"
             description={["Exchange", "Program"]}
-            subtext="January 2026 – June 2026"
+            subtext={undefined}
             link="https://eikei.ac.jp/english/"
         />,
         <ProjectItem
             title="Al Akhawayn University"
             description={["Bachelor's degree in", "Computer Science"]}
-            subtext="Aug 2024 – Aug 2028"
+            subtext={undefined}
             link="https://www.aui.ma/"
         />
     ]],
