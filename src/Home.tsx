@@ -28,7 +28,7 @@ function Home() {
                         <br></br>
                         
                         <div className='self-picture-item'>
-                            <img src="https://drive.usercontent.google.com/download?id=1zUREUT-kyDXny6yuCTtzWz2zDhGJ1hna&export=download&authuser=0&confirm=t&uuid=9010e39f-e885-432c-9f51-d14d4f5de835&at=AAINaIIeAV49O4hFawjiUueo5IYt:1781192136347" alt='Metaphorical Self'></img>
+                            <img src={process.env.PUBLIC_URL + '/metaphorical.png'} alt='Metaphorical Self'></img>
                             <p className='picture-subtitle'>Metaphorical Self</p>
                         </div>
                         
