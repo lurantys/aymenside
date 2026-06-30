@@ -47,6 +47,12 @@ export const ALL_PROJECT_ITEMS: Map<string, JSX.Element[]> = new Map<string, JSX
     ]], 
     ["Projects & Achievements", [
         <ProjectItem
+            title="StackGPT"
+            description={["Never lose a good chat again.", "Save snippets across every AI platform."]}
+            subtext="Built to organize your AI conversations."
+            link="https://lurantys.github.io/stackgpt/"
+        />,
+        <ProjectItem
             title="SafirMed"
             description={["A", "doctor directory web app", "for El Jadida, making it easy to", "find and connect with local healthcare providers", "through a clean, accessible interface"]}
             subtext="Built with Next.js and deployed on Vercel."
