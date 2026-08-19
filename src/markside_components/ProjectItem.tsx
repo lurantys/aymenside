@@ -33,12 +33,6 @@ export default ProjectItem;
 export const ALL_PROJECT_ITEMS: Map<string, JSX.Element[]> = new Map<string, JSX.Element[]>([
     ["Experience", [
         <ProjectItem
-            title="Data Science Intern"
-            description={["Built", "AI models", "for", "accident prevention", "using machine learning and data analysis to improve safety systems"]}
-            subtext={undefined}
-            link="https://www.hiroden.co.jp/"
-        />,
-        <ProjectItem
             title="Hack Club Neighborhood"
             description={["Created and showcased", "coding projects", "in a global student community, focusing on", "rapid prototyping, problem-solving,", "and", "peer-to-peer learning"]}
             subtext={undefined}
