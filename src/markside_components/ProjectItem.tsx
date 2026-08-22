@@ -52,12 +52,12 @@ export const ALL_PROJECT_ITEMS: Map<string, JSX.Element[]> = new Map<string, JSX
             subtext="Built to organize your AI conversations."
             link="https://lurantys.github.io/stackgpt/"
         />,
-        <ProjectItem
-            title="SafirMed"
-            description={["A", "doctor directory web app", "for El Jadida, making it easy to", "find and connect with local healthcare providers", "through a clean, accessible interface"]}
-            subtext="Built with Next.js and deployed on Vercel."
-            link="https://safirmed.vercel.app/"
-        />,
+<ProjectItem
+            title="Hana"
+            description={["Designed, built, and deployed a production-grade full-stack manga reading application serving 20+ active users", "Engineered multi-source content aggregation, unifying MangaDex, Atsu, and MangaKatana into a single searchable interface", "Implemented third-party sync integrations with AniList and MyAnimeList for seamless reading progress and library tracking across platforms", "Shipped a cross-platform desktop client using Tauri, extending the web app to native desktop environments", "Iterated on product features based on direct user feedback, improving usability and reliability post-launch"]}
+            subtext={undefined}
+            link="https://hanamanga.online"
+/>,
         <ProjectItem
             title="PokeDoro"
             description={["A", "Pokémon-inspired Pomodoro web app", "that gamifies focus and productivity, pairing", "timed work sessions", "with tasks, streaks, and", "progression mechanics"]}
