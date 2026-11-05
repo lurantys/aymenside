@@ -66,7 +66,7 @@ export const ALL_PROJECT_ITEMS: Map<string, JSX.Element[]> = new Map<string, JSX
         />,
 <ProjectItem
             title="Hana"
-            description={["Manga reader serving 20 active users", "Multi-source aggregation: MangaDex, Atsu, MangaKatana", "AniList and MyAnimeList sync for progress and library tracking", "Tauri cross-platform desktop client"]}
+            description={["Manga reader serving 200+ users", "Multi-source aggregation: MangaDex, Atsu, MangaKatana", "AniList and MyAnimeList sync for progress and library tracking", "Tauri cross-platform desktop client"]}
             subtext={undefined}
             link="https://hanamanga.online"
 />,
