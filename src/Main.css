@@ -1,46 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap');
-@import url('https://use.typekit.net/pzo7ugc.css');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url("https://use.typekit.net/pzo7ugc.css");
 
-:root {
-  --blue: #1d4296;
-  --blue-dark: #153273;
-  --ink: #253044;
-  --muted: #536078;
-  --paper: #f8f9fc;
-  --panel: #e4e9f2;
-  --line: #cad3e2;
-  font-family: 'League Spartan', sans-serif;
-  color: var(--ink);
-  background: var(--paper);
-  font-synthesis: none;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-*, *::before, *::after { box-sizing: border-box; }
-body { margin: 0; -webkit-font-smoothing: antialiased; line-height: 1.55; }
-h1, h2, h3, p, figure { margin: 0; }
-img { display: block; max-width: 100%; }
-a { color: var(--blue); text-underline-offset: .2em; }
-a:hover { color: var(--blue-dark); }
-a:active { color: #102351; }
-button, a { -webkit-tap-highlight-color: #cad3e2; }
-button { font: inherit; cursor: pointer; }
-:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
-[hidden] { display: none !important; }
-.skip-link { position: absolute; top: .5rem; left: .5rem; z-index: 10; padding: .7rem 1rem; background: white; transform: translateY(-150%); }
-.skip-link:focus { transform: translateY(0); }
-.primary-header { background: linear-gradient(#e4e9f2ed, #e4e9f2ed), url('./img/hisui.jpg') 40% 50% / cover; border-bottom: 1px solid var(--line); }
-.header-inner { width: min(1120px, calc(100% - 2.5rem)); margin: auto; padding: 1.5rem 0; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-.site-name { color: var(--blue); text-decoration: none; }
-.site-name h1 { font-family: 'dovetail-mvb', Georgia, serif; font-size: clamp(2rem, 4vw, 3.3rem); font-weight: 400; line-height: 1.15; }
-.header-inner p { color: var(--muted); font-size: 1rem; margin-top: .4rem; }
-.header-inner nav { display: flex; gap: 1.2rem; }
-.header-inner nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: 1.1rem; text-decoration: none; }
-.header-inner nav a:hover { text-decoration: underline; }
-.body-central-default { text-align: center; padding: 4rem 1.25rem; }
-.gray-league-paragraph { font-size: 1.2rem; }
-@media (max-width: 560px) {
-  .header-inner { align-items: flex-start; padding: 1.1rem 0 .7rem; flex-direction: column; gap: .4rem; }
-  .header-inner p { font-size: .95rem; }
-  .header-inner nav { gap: 1.5rem; }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+  margin: 0;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.league-spartan-regular {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 300;
+}
+
+.league-spartan-bold {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 400;
+}
+
+.dovetail-title {
+  font-family: "dovetail-mvb", serif;
+  color: #1D4296;
+  font-style: normal;
+  font-weight: 200;
+}
+
+.banner-bg-image {
+  background-image: url('./img/hisui.jpg');
+  background-position: 40% 50%;
+  background-size: cover;
+}
+
+.primary-header {
+  width: 100%;
+  height: 8em;
+  position: relative;
+  text-align: center;
+}
+
+.header-gray-bg {
+  background-color: rgba(228, 233, 242, .82);
+  height: 100%;
+  width: 100%;
+}
+
+.header-text {
+  font-size: clamp(2.5rem, 8vw, 6em);
+  padding-top: .05em;
+  line-height: 1.1;
+}
+
+@media only screen and (max-width: 768px) {
+  .primary-header {
+    height: 5.5em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .primary-header {
+    height: 4.5em;
+  }
+}
