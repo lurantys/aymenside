@@ -29,7 +29,6 @@ function ProjectItem(props: ProjectItemProps): JSX.Element {
 
 export default ProjectItem;
 
-// Items ordered most recent first.
 export const ALL_PROJECT_ITEMS: Map<string, JSX.Element[]> = new Map<string, JSX.Element[]>([
     ["Experience", [
         <ProjectItem
@@ -46,6 +45,12 @@ export const ALL_PROJECT_ITEMS: Map<string, JSX.Element[]> = new Map<string, JSX
         />
     ]], 
     ["Projects & Achievements", [
+        <ProjectItem
+            title="Hana"
+            description={["Manga reader serving 200+ users", "Multi-source aggregation: MangaDex, Atsu, MangaKatana", "AniList and MyAnimeList sync for progress and library tracking", "Tauri cross-platform desktop client"]}
+            subtext={undefined}
+            link="https://hanamanga.online"
+        />,
         <ProjectItem
             title="Poststash"
             description={["A", "Chrome extension", "that saves photos and videos from Instagram, TikTok, and X, plus", "audio from YouTube", "through download buttons built into each site's interface."]}
@@ -64,12 +69,6 @@ export const ALL_PROJECT_ITEMS: Map<string, JSX.Element[]> = new Map<string, JSX
             subtext="Built to organize your AI conversations."
             link="https://lurantys.github.io/stackgpt/"
         />,
-<ProjectItem
-            title="Hana"
-            description={["Manga reader serving 200+ users", "Multi-source aggregation: MangaDex, Atsu, MangaKatana", "AniList and MyAnimeList sync for progress and library tracking", "Tauri cross-platform desktop client"]}
-            subtext={undefined}
-            link="https://hanamanga.online"
-/>,
         <ProjectItem
             title="PokeDoro"
             description={["A", "Pokémon-inspired Pomodoro web app", "that gamifies focus and productivity, pairing", "timed work sessions", "with tasks, streaks, and", "progression mechanics"]}
