@@ -1,70 +1,63 @@
 import './Home.css';
-import real_self_img from './img/real_self.jpg';
-import wooper_img from './img/wooper.png';
+import realSelf from './img/real_self.jpg';
+import wooper from './img/wooper.png';
 import Projects from './markside_components/Projects';
 
 function Home() {
     return (
-        <>  
-            <div className='middle-column container-body-width'>
-                <div className='middle-flex-row'>
-                    <div className='blue-bubble who-am-i'>
-                        <h1 className='blue-league-title'>Who am I?</h1>
-                        <p className='gray-league-paragraph'>
-                        <span className='league-p-bold'>Computer science student</span> focused on building clean, functional, and user-friendly software. I enjoy solving technical problems, experimenting with new ideas, and creating projects that balance simplicity with good design.
-                        <br></br><br></br>
-                        Outside of coding, I spend time exploring game systems, interactive experiences, and the technology behind the products people use every day.
-                        <br></br><br></br>
-                        Check out my <a className='league-p-clickable' href="#Projects" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('openProjects')); }}><span className='league-p-bold'>Projects</span></a> to see what I've been working on.</p>
+        <main id="main-content" className="portfolio">
+            <section className="intro" aria-labelledby="intro-title">
+                <div className="intro-copy">
+                    <h2 id="intro-title">I build apps, browser extensions, and interactive tools.</h2>
+                    <p>I'm Aymen, a computer science student who enjoys turning everyday ideas into software people can use.</p>
+                    <p>Outside of coding, you'll find me exploring game systems, interactive experiences, and the technology behind them.</p>
+                    <nav className="intro-links" aria-label="Quick links">
+                        <a className="primary-link" href="#Projects" onClick={() => window.dispatchEvent(new Event('openProjects'))}>See my projects</a>
+                        <a href="https://github.com/lurantys/">GitHub</a>
+                        <a href={process.env.PUBLIC_URL + '/Resume_NHAILAAymen.pdf'}>Resume</a>
+                    </nav>
+                    <a className="intro-email" href="mailto:a.nhaila@aui.ma">a.nhaila@aui.ma</a>
+                </div>
+                <div className="self-pictures">
+                    <figure className="real-picture">
+                        <img src={realSelf} alt="Aymen beside the Ado statue in Shibuya, both wearing Japan football shirts" width="900" height="1200" {...{ fetchpriority: 'high' }} />
+                        <figcaption>The Real Me <span>Shibuya, Japan</span></figcaption>
+                    </figure>
+                    <figure className="metaphorical-picture">
+                        <img src={process.env.PUBLIC_URL + '/metaphorical.png'} alt="Aymen's metaphorical self" width="160" height="160" />
+                        <figcaption>Metaphorical Self</figcaption>
+                    </figure>
+                </div>
+            </section>
 
-                        <br></br><br></br>
+            <Projects />
+
+            <div className="personal-sections">
+                <section id="Contact" className="contact-section" aria-labelledby="contact-title">
+                    <h2 id="contact-title">Find me</h2>
+                    <p>For projects, work, or a conversation.</p>
+                    <ul className="contact-links">
+                        <li><a href="mailto:a.nhaila@aui.ma">Email <span>a.nhaila@aui.ma</span></a></li>
+                        <li><a href="https://github.com/lurantys/">GitHub <span>@lurantys</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/aymen-nhaila-9ab6b5319/">LinkedIn <span>Aymen Nhaila</span></a></li>
+                        <li><a href={process.env.PUBLIC_URL + '/Resume_NHAILAAymen.pdf'}>Resume <span>PDF</span></a></li>
+                        <li><a href="https://leetcode.com/u/lurantys/">LeetCode <span>Occasionally active</span></a></li>
+                        <li><a href="https://www.instagram.com/bynhaila/">Instagram <span>@bynhaila</span></a></li>
+                    </ul>
+                    <img src={wooper} alt="" className="wooper-decoration" width="96" height="96" loading="lazy" />
+                </section>
+                <section className="shenanigans-section" aria-labelledby="shenanigans-title">
+                    <h2 id="shenanigans-title">Shenanigans</h2>
+                    <p>A little corner of the internet I like.</p>
+                    <div className="video-embed-container">
+                        <iframe src="https://www.youtube.com/embed/omh8FLFJX7Y" title="Shenanigans" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
                     </div>
-                    <div className='blue-bubble self-pictures'>
-                        <div className='self-picture-item'>
-                            <img src={real_self_img} alt='The Real Me'></img>
-                            <p className='picture-subtitle'>The Real Me</p>
-                        </div>
-                        
-                        <br></br>
-                        
-                        <div className='self-picture-item'>
-                            <img src={process.env.PUBLIC_URL + '/metaphorical.png'} alt='Metaphorical Self'></img>
-                            <p className='picture-subtitle'>Metaphorical Self</p>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div className ='middle-bottom'>
-                    <div className='blue-bubble'>
-                        <Projects />
-                    </div>
-                </div>
-                <div className='middle-flex-row'>
-                    <div className='blue-bubble half-container'>
-                        <div className='half-container-content'>
-                            <h1 className='blue-league-title'>Misc Links</h1>
-                            <ul>
-                                <li className='misc-links-list-item'>- <a href="https://www.linkedin.com/in/aymen-nhaila-9ab6b5319/" className='misc-links-title'>LinkedIn</a>, my professional profile</li>
-                                <li className='misc-links-list-item'>- <a href="https://github.com/lurantys/" className='misc-links-title'>GitHub</a>, where you can find all my code</li>
-                                <li className='misc-links-list-item'>- <a href="https://leetcode.com/u/lurantys/" className='misc-links-title'>LeetCode</a>, (i'm not that active)</li>
-                                <li className='misc-links-list-item'>- <a href="mailto:a.nhaila@aui.ma" className='misc-links-title'>Email</a>, for professional purposes</li>
-                                <hr></hr>
-                                <li className='misc-links-list-item'>- <a href="https://www.instagram.com/bynhaila/" className='misc-links-title'>Instagram</a>, if you know me personally</li>
-                            <li className='misc-links-list-item'>- <a href={process.env.PUBLIC_URL + '/Resume_NHAILAAymen.pdf'} className='misc-links-title'>Resume</a>, check it out!</li>
-                            </ul>
-                        </div>
-                        <img src={wooper_img} alt="Wooper" className='wooper-decoration' />
-                    </div>
-                    <div className='blue-bubble half-container'>
-                        <h1 className='blue-league-title'>Shenanigans</h1>
-                        <div className='video-embed-container'>
-                            <iframe src="https://www.youtube.com/embed/omh8FLFJX7Y" title="Shenanigans" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                        </div>
-                    </div>
-                </div>
+                    <a className="video-link" href="https://www.youtube.com/watch?v=omh8FLFJX7Y">Watch on YouTube</a>
+                </section>
             </div>
-        </>
-    )
+            <footer className="site-footer">Aymenside <span>Made by Aymen Nhaila.</span></footer>
+        </main>
+    );
 }
 
 export default Home;

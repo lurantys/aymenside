@@ -1,30 +1,25 @@
-import { useState, useEffect } from "react";
-import { useMediaQuery } from "react-responsive";
-import { ALL_PROJECT_ITEMS } from "./ProjectItem";
+import { useState, useEffect, useRef, KeyboardEvent } from 'react';
+import { ALL_PROJECT_ITEMS, FEATURED_PROJECTS } from './ProjectItem';
 
-const validTabs: string[] = ["Experience", "Education", "Projects & Achievements"];
+const tabs = ['Projects', 'Experience', 'Education'];
 
 function Projects() {
-    const [activeTab, setActiveTab] = useState("Experience")
+    const [activeTab, setActiveTab] = useState('Projects');
+    const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
     useEffect(() => {
         const activateProjects = () => {
-            setActiveTab("Projects & Achievements");
-            setTimeout(() => {
-                const projectsContainer = document.querySelector('.projects-container');
-                if (projectsContainer) {
-                    projectsContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
-            }, 100);
+            setActiveTab('Projects');
+            requestAnimationFrame(() => {
+                document.getElementById('Projects')?.scrollIntoView({
+                    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+                    block: 'start',
+                });
+            });
         };
-
         const handleHash = () => {
-            const hash = window.location.hash.slice(1);
-            if (hash === "Projects") {
-                activateProjects();
-            }
+            if (window.location.hash === '#Projects') activateProjects();
         };
-
         handleHash();
         window.addEventListener('hashchange', handleHash);
         window.addEventListener('openProjects', activateProjects);
@@ -34,33 +29,46 @@ function Projects() {
         };
     }, []);
 
-    let isMobile: boolean = useMediaQuery( {query: "(max-width: 720px)"})
+    const handleTabKey = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
+        let next = index;
+        if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+        else if (event.key === 'ArrowLeft') next = (index + tabs.length - 1) % tabs.length;
+        else if (event.key === 'Home') next = 0;
+        else if (event.key === 'End') next = tabs.length - 1;
+        else return;
+        event.preventDefault();
+        setActiveTab(tabs[next]);
+        tabRefs.current[next]?.focus();
+    };
 
     return (
-        <div className='projects-container'>
-            
-                <div className='project-tabs'>
-                {!isMobile ?
-                    validTabs.map(el => {
-                        const activeClass: string = el === activeTab ? 'active-tab-title' : 'inactive-tab-title'
-                        return <div className={`project-tab-title ${activeClass}`} onClick={() => setActiveTab(el)}>{'↪ ' + el}</div>
-                    })
-                :
-                    validTabs.map(el => {
-                        const mobileActiveClass: string = el === activeTab ? 'mobile-active-tab-selection' : 'mobile-inactive-tab-selection'
-                        return (
-                            <div className={`mobile-project-tab-title ${mobileActiveClass}`} onClick={() => setActiveTab(el)}>
-                                {el}
-                            </div>
-                        )
-                    })
-                }
-                </div>
-            <div className='project-list'>
-                {ALL_PROJECT_ITEMS.get(activeTab)}
+        <section id="Projects" className="projects-section" aria-labelledby="work-title">
+            <div className="section-heading">
+                <h2 id="work-title">Things I've been building</h2>
+                <p>Useful tools, side projects, and a few things made for fun.</p>
             </div>
-        </div>
-    )
+            <div className="project-tabs" role="tablist" aria-label="Projects and background">
+                {tabs.map((tab, index) => (
+                    <button key={tab} type="button" role="tab" id={`tab-${tab}`} aria-selected={activeTab === tab}
+                        aria-controls={`panel-${tab}`} tabIndex={activeTab === tab ? 0 : -1}
+                        ref={element => { tabRefs.current[index] = element; }}
+                        onKeyDown={event => handleTabKey(event, index)} onClick={() => setActiveTab(tab)}>
+                        {tab}
+                    </button>
+                ))}
+            </div>
+            {tabs.map(tab => (
+                <div key={tab} role="tabpanel" id={`panel-${tab}`} aria-labelledby={`tab-${tab}`}
+                    hidden={activeTab !== tab} tabIndex={0}>
+                    {tab === 'Projects' && <div className="featured-projects">{FEATURED_PROJECTS}</div>}
+                    {tab === 'Projects' && <h3 className="more-projects-title">More projects</h3>}
+                    <div className={`project-list ${tab === 'Projects' ? 'more-projects' : 'background-list'}`}>
+                        {ALL_PROJECT_ITEMS.get(tab)}
+                    </div>
+                </div>
+            ))}
+        </section>
+    );
 }
 
 export default Projects;
