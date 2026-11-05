@@ -47,6 +47,18 @@ export const ALL_PROJECT_ITEMS: Map<string, JSX.Element[]> = new Map<string, JSX
     ]], 
     ["Projects & Achievements", [
         <ProjectItem
+            title="Poststash"
+            description={["A", "Chrome extension", "that saves photos and videos from Instagram, TikTok, and X, plus", "audio from YouTube", "through download buttons built into each site's interface."]}
+            subtext="Supports Instagram profile downloads with content, format, date, and post-limit filters."
+            link="https://github.com/lurantys/poststash"
+        />,
+        <ProjectItem
+            title="Stockatfish"
+            description={["A", "Chrome chess analysis extension", "that runs", "Stockfish locally", "and overlays move hints on Chess.com analysis and bot boards."]}
+            subtext="Built for study and bot practice, with five strength levels and balanced, attacking, or positional move preferences."
+            link="https://lurantys.github.io/Stockatfish/"
+        />,
+        <ProjectItem
             title="StackGPT"
             description={["Never lose a good chat again.", "Save snippets across every AI platform."]}
             subtext="Built to organize your AI conversations."
