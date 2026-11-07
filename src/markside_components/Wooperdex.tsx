@@ -1,4 +1,4 @@
-import { useEffect, useState, type CSSProperties } from "react";
+import { useEffect, useState } from "react";
 import wooper_img from "../img/wooper.png";
 
 // Picks a random Pokémon from Gen 5 (Unova) on every load
@@ -18,16 +18,6 @@ interface DailyDex {
     flavor: string
     versionLabel: string
 }
-
-// Standard Pokémon type colors, used for the little dot in each chip
-const TYPE_COLORS: Map<string, string> = new Map<string, string>([
-    ["normal", "#A8A77A"], ["fire", "#EE8130"], ["water", "#6390F0"],
-    ["electric", "#F7D02C"], ["grass", "#7AC74C"], ["ice", "#96D9D6"],
-    ["fighting", "#C22E28"], ["poison", "#A33EA1"], ["ground", "#E2BF65"],
-    ["flying", "#A98FF3"], ["psychic", "#F95587"], ["bug", "#A6B91A"],
-    ["rock", "#B6A136"], ["ghost", "#735797"], ["dragon", "#6F35FC"],
-    ["dark", "#705746"], ["steel", "#B7B7CE"], ["fairy", "#D685AD"]
-]);
 
 // Picks a random Pokémon on every load (not per day)
 function getRandomGen5Id(): number {
@@ -151,10 +141,9 @@ function Wooperdex(): JSX.Element {
                         </span>
                     </div>
                     <div className='wooperdex-types-list'>
-                        {dex.types.map((type) => {
-                            const chipStyle = { '--type-color': TYPE_COLORS.get(type) ?? '#325199' } as CSSProperties;
-                            return <span key={type} className='wooperdex-type' style={chipStyle}>{type}</span>;
-                        })}
+                        {dex.types.map((type) => (
+                            <span key={type} className={`wooperdex-type wooperdex-type-${type}`}>{type}</span>
+                        ))}
                     </div>
                     <div className='wooperdex-flavor gray-league-paragraph'>{dex.flavor}</div>
                 </div>

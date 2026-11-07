@@ -456,27 +456,43 @@
     margin-bottom: 0.7em;
 }
 
-/* Muted chip with a colored type dot, in the site's chip style */
+/* Type chips in the authentic PokemonDB style (extracted from pokemondb.net) */
 .wooperdex-type {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35em;
+    display: inline-block;
+    min-width: 4.2em;
     font-family: "League Spartan", sans-serif;
-    font-size: clamp(0.7rem, 1.8vw, 13px);
-    font-weight: 600;
-    color: #191919;
+    font-size: clamp(0.65rem, 1.6vw, 12px);
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     background-color: rgb(199, 203, 210);
-    padding: 0.12em 0.7em;
-    border-radius: 1em;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 0.15em 0.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
-.wooperdex-type::before {
-    content: "";
-    width: 0.55em;
-    height: 0.55em;
-    border-radius: 50%;
-    background-color: var(--type-color, #325199);
-}
+.wooperdex-type-normal   { background-color: #aaaa99; }
+.wooperdex-type-fire     { background-color: #ff4422; }
+.wooperdex-type-water    { background-color: #3399ff; }
+.wooperdex-type-electric { background-color: #ffcc33; }
+.wooperdex-type-grass    { background-color: #77cc55; }
+.wooperdex-type-ice      { background-color: #66ccff; }
+.wooperdex-type-fighting { background-color: #bb5544; }
+.wooperdex-type-poison   { background-color: #aa5599; }
+.wooperdex-type-ground   { background-color: #ddbb55; }
+.wooperdex-type-flying   { background-color: #8899ff; }
+.wooperdex-type-psychic  { background-color: #ff5599; }
+.wooperdex-type-bug      { background-color: #aabb22; }
+.wooperdex-type-rock     { background-color: #bbaa66; }
+.wooperdex-type-ghost    { background-color: #6666bb; }
+.wooperdex-type-dragon   { background-color: #7766ee; }
+.wooperdex-type-dark     { background-color: #775544; }
+.wooperdex-type-steel    { background-color: #aaaabb; }
+.wooperdex-type-fairy    { background-color: #ee99ee; }
 
 .wooperdex-flavor {
     margin: 0;
