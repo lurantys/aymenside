@@ -12,7 +12,7 @@ function Home() {
                     <div className='blue-bubble who-am-i'>
                         <h1 className='blue-league-title'>Who am I?</h1>
                         <p className='gray-league-paragraph'>
-                        CS student at Al Akhawayn University. Most of my projects started as something I personally wanted to exist: a manga reader with progress tracking, a chess bot for Chrome, a Pokémon-themed pomodoro timer.
+                        CS student at Al Akhawayn University. Most of my projects started as something I personally wanted to exist: a manga reader with progress tracking, a chess cheat for Chrome, a Pokémon-themed pomodoro timer.
                         <br></br><br></br>
                         Outside of class, my time goes into anime, games, and taking things apart to see how they work. Just finished an exchange semester in Hiroshima.
                         <br></br><br></br>
