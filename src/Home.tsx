@@ -1,5 +1,5 @@
 import './Home.css';
-import real_self_img from './img/real_self.jpg';
+import real_self_img from './img/real_self.webp';
 import wooper_img from './img/wooper.png';
 import Projects from './markside_components/Projects';
 import Wooperdex from './markside_components/Wooperdex';
@@ -22,17 +22,17 @@ function Home() {
                     </div>
                     <div className='blue-bubble self-pictures'>
                         <div className='self-picture-item'>
-                            <img src={real_self_img} alt='The Real Me'></img>
+                            <img src={real_self_img} alt='The Real Me' width={400} height={400} loading='lazy'></img>
                             <p className='picture-subtitle'>The Real Me</p>
                         </div>
-                        
+
                         <br></br>
-                        
+
                         <div className='self-picture-item'>
-                            <img src={process.env.PUBLIC_URL + '/metaphorical.png'} alt='Metaphorical Self'></img>
+                            <img src={process.env.PUBLIC_URL + '/metaphorical.webp'} alt='Metaphorical Self' width={400} height={400} loading='lazy'></img>
                             <p className='picture-subtitle'>Metaphorical Self</p>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div className ='middle-bottom'>
