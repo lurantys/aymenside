@@ -11,9 +11,9 @@ function Projects() {
         const activateProjects = () => {
             setActiveTab("Projects & Achievements");
             setTimeout(() => {
-                const projectsContainer = document.querySelector('.projects-container');
-                if (projectsContainer) {
-                    projectsContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                const projectsContainer: HTMLElement | null = document.querySelector('.projects-container');
+                if (projectsContainer !== null) {
+                    projectsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             }, 100);
         };

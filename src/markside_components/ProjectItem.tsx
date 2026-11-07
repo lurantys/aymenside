@@ -3,23 +3,26 @@ interface ProjectItemProps {
     description: string[]
     subtext: string | undefined
     link: string
+    period?: string
+    location?: string
 }
 
 function ProjectItem(props: ProjectItemProps): JSX.Element {
-    const descriptionParts: JSX.Element[] = []
+    const descriptionText: string = props.description.map((el) => el.trim()).join(' ');
 
-    props.description.forEach((el, i) => {
-        if (i % 2 !== 0) {
-            descriptionParts.push(<span key={i} className='league-p-bold'> {el} </span>)
-        } else {
-            descriptionParts.push(<span key={i}>{el}</span>)
-        }
-    });
+    const metaParts: string[] = [];
+    if (props.location !== undefined) {
+        metaParts.push(props.location);
+    }
+    if (props.period !== undefined) {
+        metaParts.push(props.period);
+    }
 
     return (
         <div className='project-section'>
             <div className='project-title'><a className='project-title-link' href={props.link}>{props.title}</a></div>
-            <div className='project-desc'>{descriptionParts}</div>
+            {metaParts.length > 0 ? <div className='project-meta'>{metaParts.join(' · ')}</div> : null}
+            <div className='project-desc'>{descriptionText}</div>
             {props.subtext !== undefined ? <div className='project-subtext'>{props.subtext}</div> : null}
             <hr className='project-divide'></hr>
         </div>
@@ -36,12 +39,16 @@ export const ALL_PROJECT_ITEMS: Map<string, JSX.Element[]> = new Map<string, JSX
             description={["Built", "AI models", "for", "accident prevention", "using machine learning and data analysis to improve safety systems"]}
             subtext={undefined}
             link="https://www.hiroden.co.jp/"
+            period="Jan – Mar 2026"
+            location="Hiroshima, Japan"
         />,
         <ProjectItem
             title="Hack Club Neighborhood"
-            description={["Created and showcased", "coding projects", "in a global student community, focusing on", "rapid prototyping, problem-solving,", "and", "peer-to-peer learning"]}
+            description={["Spent a month living in a", "San Francisco hacker house", "with a global cohort of student builders, shipping and showcasing", "coding projects", "through rapid prototyping and", "peer-to-peer learning"]}
             subtext={undefined}
             link="https://hackclub.com/"
+            period="Aug 2026"
+            location="San Francisco, CA"
         />
     ]], 
     ["Projects & Achievements", [
@@ -94,12 +101,16 @@ export const ALL_PROJECT_ITEMS: Map<string, JSX.Element[]> = new Map<string, JSX
             description={["Exchange", "Program"]}
             subtext={undefined}
             link="https://eikei.ac.jp/english/"
+            period="Jan – Jun 2026"
+            location="Hiroshima, Japan"
         />,
         <ProjectItem
             title="Al Akhawayn University"
             description={["Bachelor's degree in", "Computer Science"]}
             subtext={undefined}
             link="https://www.aui.ma/"
+            period="2024 – 2028 (expected)"
+            location="Ifrane, Morocco"
         />
     ]],
     ["Games", []]

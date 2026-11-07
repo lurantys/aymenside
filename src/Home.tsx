@@ -2,6 +2,7 @@ import './Home.css';
 import real_self_img from './img/real_self.jpg';
 import wooper_img from './img/wooper.png';
 import Projects from './markside_components/Projects';
+import Wooperdex from './markside_components/Wooperdex';
 
 function Home() {
     return (
@@ -11,11 +12,11 @@ function Home() {
                     <div className='blue-bubble who-am-i'>
                         <h1 className='blue-league-title'>Who am I?</h1>
                         <p className='gray-league-paragraph'>
-                        <span className='league-p-bold'>Computer science student</span> focused on building clean, functional, and user-friendly software. I enjoy solving technical problems, experimenting with new ideas, and creating projects that balance simplicity with good design.
+                        CS student at Al Akhawayn University. Most of my projects started as something I personally wanted to exist: a manga reader with progress tracking, a chess bot for Chrome, a Pokémon-themed pomodoro timer.
                         <br></br><br></br>
-                        Outside of coding, I spend time exploring game systems, interactive experiences, and the technology behind the products people use every day.
+                        Outside of class, my time goes into anime, games, and taking things apart to see how they work. Just finished an exchange semester in Hiroshima.
                         <br></br><br></br>
-                        Check out my <a className='league-p-clickable' href="#Projects" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('openProjects')); }}><span className='league-p-bold'>Projects</span></a> to see what I've been working on.</p>
+                        Check out my <a className='league-p-clickable' href="#Projects" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('openProjects')); }}>Projects</a>, everything I've shipped is under there.</p>
 
                         <br></br><br></br>
                     </div>
@@ -56,10 +57,7 @@ function Home() {
                         <img src={wooper_img} alt="Wooper" className='wooper-decoration' />
                     </div>
                     <div className='blue-bubble half-container'>
-                        <h1 className='blue-league-title'>Shenanigans</h1>
-                        <div className='video-embed-container'>
-                            <iframe src="https://www.youtube.com/embed/omh8FLFJX7Y" title="Shenanigans" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                        </div>
+                        <Wooperdex />
                     </div>
                 </div>
             </div>

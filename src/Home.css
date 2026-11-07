@@ -171,18 +171,15 @@
     text-align: center;
 }
 
-.league-p-bold {
-    font-weight: 600;
-}
-
 .league-p-clickable {
-    font-weight: 600;
+    font-weight: 400;
     color: #1D4296;
     text-decoration: none;
 }
 
 .projects-container {
     padding: .1em;
+    scroll-margin-top: 3em;
 }
 
 .project-tabs {
@@ -272,6 +269,14 @@
     color: #191919;
 }
 
+.project-meta {
+    font-family: "League Spartan", sans-serif;
+    font-size: clamp(0.7rem, 1.8vw, 14px);
+    font-weight: 400;
+    color: #7688B1;
+    margin: 2px 0px 6px;
+}
+
 .project-desc {
     font-family: "League Spartan", sans-serif;
     font-size: clamp(0.9rem, 2vw, 18px);
@@ -337,6 +342,208 @@
 @media only screen and (max-width: 719px) {
     .wooper-decoration {
         width: 3.5em;
+    }
+}
+
+/* ---- Wooperdex (site-native styling) ---- */
+.wooperdex-card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 0.5em;
+    padding: 1.2em 1.4em 0.6em;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    box-shadow: 0 1px 4px rgba(29, 66, 150, 0.08);
+}
+
+/* Giant watermark dex number behind everything */
+.wooperdex-dexnum {
+    position: absolute;
+    top: 0;
+    right: 0.25em;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 600;
+    font-size: clamp(3.5rem, 8vw, 6.5rem);
+    line-height: 1;
+    color: rgba(29, 66, 150, 0.07);
+    pointer-events: none;
+    user-select: none;
+}
+
+.wooperdex-entry {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 1.2em;
+    align-items: center;
+    flex: 1;
+}
+
+.wooperdex-frame-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* Soft rounded square frame, matching the site's self-picture frames */
+.wooperdex-frame {
+    width: 7.5em;
+    height: 7.5em;
+    background-color: rgb(228, 233, 242);
+    border: 1px solid rgba(118, 136, 177, 0.25);
+    border-radius: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wooperdex-sprite {
+    width: 4.8em;
+    image-rendering: pixelated;
+}
+
+.wooperdex-counter {
+    font-family: "dovetail-mvb", serif;
+    font-size: clamp(0.75rem, 1.8vw, 15px);
+    color: rgb(112, 112, 112);
+    margin: 0.45em 0 0;
+    text-align: center;
+}
+
+.wooperdex-data {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    flex: 1;
+}
+
+.wooperdex-name-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6em;
+    flex-wrap: wrap;
+    border-bottom: 1px dotted rgba(118, 136, 177, 0.4);
+    padding-bottom: 0.35em;
+    margin-bottom: 0.6em;
+}
+
+.wooperdex-name {
+    font-family: "League Spartan", sans-serif;
+    font-size: clamp(1.1rem, 2.5vw, 24px);
+    font-weight: 600;
+    color: #191919;
+}
+
+.wooperdex-name-link:link,
+.wooperdex-name-link:visited {
+    color: #191919;
+    text-decoration: none;
+}
+
+.wooperdex-name-link:hover {
+    color: #7688B1;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.wooperdex-types-list {
+    display: flex;
+    gap: 0.4em;
+    flex-wrap: wrap;
+    margin-bottom: 0.7em;
+}
+
+/* Muted chip with a colored type dot, in the site's chip style */
+.wooperdex-type {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    font-family: "League Spartan", sans-serif;
+    font-size: clamp(0.7rem, 1.8vw, 13px);
+    font-weight: 600;
+    color: #191919;
+    background-color: rgb(199, 203, 210);
+    padding: 0.12em 0.7em;
+    border-radius: 1em;
+}
+
+.wooperdex-type::before {
+    content: "";
+    width: 0.55em;
+    height: 0.55em;
+    border-radius: 50%;
+    background-color: var(--type-color, #325199);
+}
+
+.wooperdex-flavor {
+    margin: 0;
+    line-height: 1.45;
+}
+
+.wooperdex-footline {
+    text-align: center;
+    font-family: "League Spartan", sans-serif;
+    font-size: clamp(0.6rem, 1.4vw, 11px);
+    font-weight: 200;
+    letter-spacing: 0.14em;
+    color: #7688B1;
+    margin-top: 0.9em;
+}
+
+/* ---- Wooperdex loading state ---- */
+.wooperdex-boot {
+    justify-content: center;
+    min-height: 9em;
+}
+
+.wooperdex-boot-line {
+    font-family: "League Spartan", sans-serif;
+    font-size: clamp(0.85rem, 2vw, 17px);
+    font-weight: 200;
+    letter-spacing: 0.03em;
+    color: #7688B1;
+    margin: 0;
+    position: relative;
+}
+
+.wooperdex-cursor {
+    color: #1D4296;
+    animation: wooperdex-blink 0.9s steps(1, end) infinite;
+}
+
+@keyframes wooperdex-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@media only screen and (max-width: 719px) {
+    .wooperdex-entry {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .wooperdex-name-row {
+        justify-content: center;
+    }
+
+    .wooperdex-types-list {
+        justify-content: center;
+    }
+
+    .wooperdex-frame {
+        width: 6.5em;
+        height: 6.5em;
+    }
+
+    .wooperdex-sprite {
+        width: 4.2em;
+    }
+
+    .wooperdex-dexnum {
+        font-size: clamp(2.5rem, 12vw, 4.5rem);
     }
 }
 
