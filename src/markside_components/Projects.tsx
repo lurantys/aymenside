@@ -43,7 +43,7 @@ function Projects() {
                 {!isMobile ?
                     validTabs.map(el => {
                         const activeClass: string = el === activeTab ? 'active-tab-title' : 'inactive-tab-title'
-                        return <div className={`project-tab-title ${activeClass}`} onClick={() => setActiveTab(el)}>{'↪ ' + el}</div>
+                        return <div className={`project-tab-title ${activeClass}`} onClick={() => setActiveTab(el)}>{el}</div>
                     })
                 :
                     validTabs.map(el => {
