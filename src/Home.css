@@ -64,6 +64,10 @@
     flex-grow: 17;
 }
 
+.who-am-i .gray-league-paragraph + .gray-league-paragraph {
+    margin-top: 1.4em;
+}
+
 .half-container {
     flex: 1;
     min-width: 0;

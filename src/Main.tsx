@@ -18,7 +18,7 @@ function Main() {
 
           <Route path="/" Component={Home} />
 
-          <Route path="/not_available" Component={Unavailable} />
+          <Route path="*" Component={Unavailable} />
 
         </Routes>
       </Router>

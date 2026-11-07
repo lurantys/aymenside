@@ -43,13 +43,13 @@ function Projects() {
                 {!isMobile ?
                     validTabs.map(el => {
                         const activeClass: string = el === activeTab ? 'active-tab-title' : 'inactive-tab-title'
-                        return <div className={`project-tab-title ${activeClass}`} onClick={() => setActiveTab(el)}>{el}</div>
+                        return <div key={el} className={`project-tab-title ${activeClass}`} onClick={() => setActiveTab(el)}>{el}</div>
                     })
                 :
                     validTabs.map(el => {
                         const mobileActiveClass: string = el === activeTab ? 'mobile-active-tab-selection' : 'mobile-inactive-tab-selection'
                         return (
-                            <div className={`mobile-project-tab-title ${mobileActiveClass}`} onClick={() => setActiveTab(el)}>
+                            <div key={el} className={`mobile-project-tab-title ${mobileActiveClass}`} onClick={() => setActiveTab(el)}>
                                 {el}
                             </div>
                         )

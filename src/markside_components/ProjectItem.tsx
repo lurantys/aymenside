@@ -35,6 +35,7 @@ export default ProjectItem;
 export const ALL_PROJECT_ITEMS: Map<string, JSX.Element[]> = new Map<string, JSX.Element[]>([
     ["Experience", [
         <ProjectItem
+            key="hiroden"
             title="Data Science Intern"
             description={["Built", "AI models", "for", "accident prevention", "using machine learning and data analysis to improve safety systems"]}
             subtext={undefined}
@@ -43,6 +44,7 @@ export const ALL_PROJECT_ITEMS: Map<string, JSX.Element[]> = new Map<string, JSX
             location="Hiroshima, Japan"
         />,
         <ProjectItem
+            key="neighborhood"
             title="Hack Club Neighborhood"
             description={["Spent a month living in a", "San Francisco hacker house", "with a global cohort of student builders, shipping and showcasing", "coding projects", "through rapid prototyping and", "peer-to-peer learning"]}
             subtext={undefined}
@@ -53,50 +55,58 @@ export const ALL_PROJECT_ITEMS: Map<string, JSX.Element[]> = new Map<string, JSX
     ]], 
     ["Projects & Achievements", [
         <ProjectItem
+            key="hana"
             title="Hana"
-            description={["Manga reader serving 200+ users", "Multi-source aggregation: MangaDex, Atsu, MangaKatana", "AniList and MyAnimeList sync for progress and library tracking", "Tauri cross-platform desktop client"]}
-            subtext={undefined}
+            description={["A manga reader with multiple sources and reading progress synced to AniList and MyAnimeList."]}
+            subtext="Also available as a cross-platform desktop app built with Tauri."
             link="https://hanamanga.online"
         />,
         <ProjectItem
+            key="poststash"
             title="Poststash"
-            description={["A", "Chrome extension", "that saves photos and videos from Instagram, TikTok, and X, plus", "audio from YouTube", "through download buttons built into each site's interface."]}
-            subtext="Supports Instagram profile downloads with content, format, date, and post-limit filters."
+            description={["A Chrome extension for saving photos and videos from Instagram, TikTok, and X, plus audio from YouTube."]}
+            subtext="Download buttons appear directly on each site."
             link="https://github.com/lurantys/poststash"
         />,
         <ProjectItem
+            key="stockatfish"
             title="Stockatfish"
-            description={["A", "Chrome chess analysis extension", "that runs", "Stockfish locally", "and overlays move hints on Chess.com analysis and bot boards."]}
-            subtext="Built for study and bot practice, with five strength levels and balanced, attacking, or positional move preferences."
+            description={["A Chrome extension that adds Stockfish move hints to Chess.com analysis and bot boards."]}
+            subtext="Runs locally, with five strength levels and a choice of playing styles."
             link="https://lurantys.github.io/Stockatfish/"
         />,
         <ProjectItem
+            key="stackgpt"
             title="StackGPT"
-            description={["Never lose a good chat again.", "Save snippets across every AI platform."]}
-            subtext="Built to organize your AI conversations."
+            description={["Save and organize snippets from AI conversations across platforms."]}
+            subtext={undefined}
             link="https://lurantys.github.io/stackgpt/"
         />,
         <ProjectItem
+            key="pokedoro"
             title="PokeDoro"
-            description={["A", "Pokémon-inspired Pomodoro web app", "that gamifies focus and productivity, pairing", "timed work sessions", "with tasks, streaks, and", "progression mechanics"]}
-            subtext="The core timer and task system are live, with badges, Pokédex progression, and additional gamified features in development."
+            description={["A Pokémon-themed Pomodoro timer with tasks and focus streaks."]}
+            subtext="Timer and tasks are live; badges and Pokédex progression are in development."
             link="https://pokedorosf.vercel.app/"
         />,
         <ProjectItem
+            key="yoshi"
             title="Yoshi"
-            description={["A", "mood-driven web app", "that generates", "personalized Spotify playlists", "based on how you're feeling, what you're doing, or the vibe you want"]}
-            subtext="Users can describe their mood in natural language or choose quick presets, with the app handling playlist creation through Spotify integration."
+            description={["Creates Spotify playlists from a mood description or a quick preset."]}
+            subtext={undefined}
             link="https://yoshi-red.vercel.app/"
         />,
         <ProjectItem
+            key="quotethat"
             title="QuoteThat"
-            description={["A", "Python-based Discord bot", "that generates", "styled quote images", "using Discord.py and Pillow, allowing users to create and share inspirational quote graphics directly within their server"]}
-            subtext="The core quote image generation and Discord integration are implemented, with plans to expand customization options and quote sources."
+            description={["A Discord bot for creating and sharing styled quote images in your server."]}
+            subtext="Built with Python, Discord.py, and Pillow."
             link="https://github.com/lurantys/quotethat"
         />
     ]], 
     ["Education", [
         <ProjectItem
+            key="eikei"
             title="Eikei University of Hiroshima"
             description={["Exchange", "Program"]}
             subtext={undefined}
@@ -105,6 +115,7 @@ export const ALL_PROJECT_ITEMS: Map<string, JSX.Element[]> = new Map<string, JSX
             location="Hiroshima, Japan"
         />,
         <ProjectItem
+            key="aui"
             title="Al Akhawayn University"
             description={["Bachelor's degree in", "Computer Science"]}
             subtext={undefined}

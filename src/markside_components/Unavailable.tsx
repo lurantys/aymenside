@@ -1,10 +1,13 @@
+import { Link } from 'react-router-dom';
+
 function Unavailable() {
     return (
-        <div className="body-central-default">
-            <div className="gray-league-paragraph">Looks like the link you're looking for is a dead end. Or at least it's something that doesn't have a home yet!</div>
+        <main className="body-central-default">
+            <h2 className="blue-league-title">Page not found</h2>
+            <p className="gray-league-paragraph">There's nothing at this address yet.</p>
             <br></br>
-            <a className="gray-league-paragraph"href="/">Main Page</a>
-        </div>
+            <Link className="gray-league-paragraph league-p-clickable" to="/">Back to home</Link>
+        </main>
     )
 }
 

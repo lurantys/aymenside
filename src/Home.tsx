@@ -17,7 +17,7 @@ function Home() {
                         Outside of class, my time goes into anime, games, and taking things apart to see how they work: my switch most recently, to solder a mod chip.
                         </p>
                         <p className='gray-league-paragraph'>
-                        I love to travel, though so far that's only taken me to Japan. I just finished an exchange semester in Hiroshima, and I'm already planning to go back.
+                        I love to travel. So far, I've made it to Japan and SF. I just finished an exchange semester in Hiroshima, and I'm already planning to go back to Japan.
                         </p>
                         <p className='gray-league-paragraph'>
                         Check out my <a className='league-p-clickable' href="#Projects" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('openProjects')); }}>Projects</a>, everything I've shipped is under there.</p>
