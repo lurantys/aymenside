@@ -14,8 +14,12 @@ function Home() {
                         <p className='gray-league-paragraph'>
                         CS student at Al Akhawayn University. Most of my projects started as something I personally wanted to exist: a manga reader with progress tracking, a chess cheat for Chrome, a Pokémon-themed pomodoro timer.
                         <br></br><br></br>
-                        Outside of class, my time goes into anime, games, and taking things apart to see how they work: my switch most recently, to solder a mod chip. Just finished an exchange semester in Hiroshima.
-                        <br></br><br></br>
+                        Outside of class, my time goes into anime, games, and taking things apart to see how they work: my switch most recently, to solder a mod chip.
+                        </p>
+                        <p className='gray-league-paragraph'>
+                        I love to travel, though so far that's only taken me to Japan. I just finished an exchange semester in Hiroshima, and I'm already planning to go back.
+                        </p>
+                        <p className='gray-league-paragraph'>
                         Check out my <a className='league-p-clickable' href="#Projects" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('openProjects')); }}>Projects</a>, everything I've shipped is under there.</p>
 
                         <br></br><br></br>
