@@ -302,6 +302,118 @@
     opacity: 0.2;
 }
 
+.project-details {
+    width: 100%;
+}
+
+.project-details-toggle {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1em;
+    color: #191919;
+    cursor: pointer;
+    list-style: none;
+}
+
+.project-overview {
+    min-width: 0;
+}
+
+.project-overview .project-desc,
+.project-overview .project-meta {
+    display: block;
+}
+
+.project-details-toggle::-webkit-details-marker {
+    display: none;
+}
+
+.project-details-toggle::marker {
+    content: "";
+}
+
+.project-details-toggle:hover .project-title {
+    color: #7688B1;
+}
+
+.project-details-toggle:focus-visible {
+    outline: 2px solid #1D4296;
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+.project-details-icon {
+    flex-shrink: 0;
+    margin-top: 0.1em;
+    color: #7688B1;
+    transition: transform 160ms ease;
+}
+
+.project-details[open] .project-details-icon {
+    transform: rotate(180deg);
+}
+
+.project-details-content {
+    padding: 0.5em 0 0.8em;
+}
+
+.project-screenshot {
+    margin: 0 0 1em;
+}
+
+.project-screenshot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.45em;
+}
+
+.project-screenshot figcaption {
+    margin-top: 0.45em;
+    color: #707070;
+    font-family: "League Spartan", sans-serif;
+    font-size: 0.85em;
+    line-height: 1.35;
+}
+
+.project-detail-paragraph {
+    margin: 0.7em 0;
+    font-family: "League Spartan", sans-serif;
+    font-size: clamp(0.9rem, 1.8vw, 17px);
+    font-weight: 300;
+    line-height: 1.45;
+}
+
+.project-tech-list {
+    margin: 0.8em 0;
+    font-family: "League Spartan", sans-serif;
+    font-size: clamp(0.8rem, 1.8vw, 16px);
+    font-weight: 300;
+    line-height: 1.4;
+    color: #61749d;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-details-icon {
+        transition: none;
+    }
+}
+
+.project-detail-link {
+    display: inline-block;
+    margin-top: 0.35em;
+    color: #1D4296;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.project-detail-link:hover {
+    color: #7688B1;
+    text-decoration: underline;
+}
+
 .misc-links-title {
     font-weight: 400;
     font-family: "League Spartan", sans-serif;
